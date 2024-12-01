@@ -1,8 +1,8 @@
-import { RequestOption } from "../types/types";
+import { EthReturn, RequestOption } from "../types/types";
 
 import("dotenv/config");
 
-export async function gasUsdEth() {
+export async function gasUsdEth(): Promise<EthReturn> {
   const myHeaders = new Headers();
 
   const usdt = "0xdAC17F958D2ee523a2206206994597C13D831ec7";

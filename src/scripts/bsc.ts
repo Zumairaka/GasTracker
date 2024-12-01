@@ -1,8 +1,8 @@
-import { RequestOption } from "../types/types";
+import { EthReturn, RequestOption } from "../types/types";
 
 import("dotenv/config");
 
-export async function gasUsdBsc() {
+export async function gasUsdBsc(): Promise<EthReturn> {
   const myHeaders = new Headers();
 
   const usdt = "0x55d398326f99059fF775485246999027B3197955"; // binance-peg BSC-USD

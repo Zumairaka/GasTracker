@@ -1,7 +1,9 @@
 // The fee is based on the rate per bytes in satoshis and number of bytes in the transactions
 // Detailed description on fees on btc is given in readme under BTC section.
 
-export async function gasUsdBtc() {
+import { BtcReturn } from "../types/types";
+
+export async function gasUsdBtc(): Promise<BtcReturn> {
   // fetch the price for USDT in BTC (every txn on Lightnin network is as number of Satoshis)
   const priceResponse = await fetch(
     "https://api.binance.com/api/v3/ticker/price?symbol=BTCUSDT"

@@ -1,6 +1,6 @@
 import { RequestOption } from "../types/types";
 
-export async function gasUsdTrx() {
+export async function gasUsdTrx(): Promise<number> {
   const myHeaders = new Headers();
 
   myHeaders.append("Content-Type", "application/json");

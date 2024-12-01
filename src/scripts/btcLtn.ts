@@ -2,7 +2,9 @@
 // Detailed description on fees on btc is given in readme under BTC Lightning section.
 // In this script, the fee calculation is done based on the major prcatice on minimum and maximum fee.
 
-export async function gasUsdBtcLtn() {
+import { BtcLtnReturn } from "../types/types";
+
+export async function gasUsdBtcLtn(): Promise<BtcLtnReturn> {
   // fetch the price for USDT in BTC (every txn on Lightnin network is as number of Satoshis)
   const priceResponse = await fetch(
     "https://api.binance.com/api/v3/ticker/price?symbol=BTCUSDT"

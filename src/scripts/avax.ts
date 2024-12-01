@@ -1,6 +1,6 @@
 import { RequestOption } from "../types/types";
 
-export async function gasUsdAvax() {
+export async function gasUsdAvax(): Promise<number> {
   const myHeaders = new Headers();
 
   const usdt = "0x9702230A8Ea53601f5cD2dc00fDBc13d4dF4A8c7";

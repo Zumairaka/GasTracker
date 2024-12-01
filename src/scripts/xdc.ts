@@ -1,6 +1,6 @@
-import { RequestOption } from "../types/types";
+import { EthReturn, RequestOption } from "../types/types";
 
-export async function gasUsdXdc() {
+export async function gasUsdXdc(): Promise<EthReturn> {
   const myHeaders = new Headers();
 
   const usdt = "0xd4b5f10d61916bd6e0860144a91ac658de8a1437";

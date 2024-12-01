@@ -1,6 +1,6 @@
-import { RequestOption } from "../types/types";
+import { RequestOption, XrpReturn } from "../types/types";
 
-export async function gasUsdXrp() {
+export async function gasUsdXrp(): Promise<XrpReturn> {
   const myHeaders = new Headers();
 
   myHeaders.append("Content-Type", "application/json");

@@ -6,8 +6,9 @@ import {
   Transaction,
   PublicKey,
 } from "@solana/web3.js";
+import { SolReturn } from "../types/types";
 
-export async function gasUsdSol() {
+export async function gasUsdSol(): Promise<SolReturn> {
   const connection = new Connection(clusterApiUrl("mainnet-beta"), "confirmed");
   const lamportsPerSignature = 5000; // currently fee is fixed as 5000 lamports per signature
   const usdt = new PublicKey("Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB"); // USDT in mainnet
